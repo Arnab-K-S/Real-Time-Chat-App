@@ -1,28 +1,42 @@
 *{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     padding: 0;
     margin: 0;
+    scroll-behavior: smooth;
+    transition: 1s;
 }
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    height: 100%;
     width: 100%;
-    background-color: rgb(216, 216, 216);
+    background-color: rgb(142, 142, 142);
 }
-
-.card{
-    border-radius: 5vh  5vh 0vh 0vh;
+.parent{
     box-shadow: 0.1vh 0.1vh 1vh 0vh;
+    width: 80%;
+    height: auto;
+    padding:5%;
+    background-color: white;
+}
+.card{
+    /* border-radius: 5vh  5vh 0vh 0vh; */
+    box-shadow: 0.1vh 0.1vh 1vh 0vh;
+    margin: 5%;
     /* display: flex; */
     /* align-items: inline; */
     /* justify-content: flex-end; */
-    width: 100%;
-    height: 40vh;
+    height:50vh;
     padding:5%;
-    background-color: rgb(140, 140, 140);
-    overflow-y:auto;
+    width:auto;
+    background-attachment: fixed;
+    /* height:fit-content; */
+    /* background-color: antiquewhite; */
+    /* background-image: linear-gradient(rgba(0, 0, 0, 0.694), rgba(0, 0, 0, 0.737)),url("https://media.istockphoto.com/vectors/social-media-line-seamless-pattern-vector-id917266744?b=1&k=20&m=917266744&s=612x612&w=0&h=nDpSv59u52RTBtY3hVHlo6Z3MvzPkku1Ln5CejsSTF0="); */
+    background-color: rgb(233, 233, 233);
+    overflow-y: auto;
 }
 .mbar{
     display: flex;
@@ -31,7 +45,7 @@
     width: 100%;
     margin: 2%;
     height: 5vh;
-    box-shadow: 0vh 0vh 1vh 0vh;
+    /* box-shadow: 0vh 0vh 1vh 0vh; */
     border-radius: 0vh 0vh 2vh 2vh;
     /* position: relative; */
     /* bottom: -25vh; */
@@ -39,41 +53,55 @@
     /* border-top: none; */
     /* border-right: none; */
 }
-input,input:active{
+input,input:focus{
     background-color: rgb(255, 255, 255);
-    padding: 0%;
-    width: 40vh;
+    padding-left: 5%;
+    width: 100%;
     height: 5vh;
-    border-radius: 2vh 2vh 2vh 2vh;
-    border: 0.5vh solid rgb(132, 0, 220);
+    outline: none;
+    /* border-radius: 2vh 2vh 2vh 2vh; */
+    border-bottom: 0.1vh solid rgb(0, 0, 0);
+    border-left: none;
+    border-right: none;
+    border-top: none;
 
 }
 
 #sub{
     height: 6vh;
     width: 6vh;
+    min-width: fit-content;
+    min-height: fit-content;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* padding: 1%; */
     margin-left: 4%;
-    border-radius: 25vh;
+    border-radius: 5vh;
     box-shadow: 0 0 0 0;
     border: none;
     color:white;
-    background-image: radial-gradient(rgb(137, 90, 255),rgb(93, 0, 255));
-
+    background-image: radial-gradient(rgb(72, 0, 255),rgb(0, 13, 255));
+    
 }
 li{
     list-style-type: none;
+    min-height: 4vh;
+    min-width: 6vh;
 }
 .me{
-    padding: 1% 1%  1% 4%;
+    padding: 3% 3%  3% 3%;
     min-height: 4vh;
+    min-width: 3vh;
     /* margin: 2%; */
     margin-left: auto;
     margin-right: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
     width: fit-content;
-    border-radius: 2vh 0vh 2vh 2vh;
-    background-image:linear-gradient(rgb(216, 255, 210),rgb(163, 255, 178));
-    color: rgb(50, 50, 50);
+    border-radius: 4vh 0vh 4vh 4vh;
+    box-shadow: 0.5vh 0.5vh 0.5vh 0vh rgba(0, 0, 0, 0.441);
+    background-image:linear-gradient(rgb(58, 58, 58),rgb(0, 0, 0));
+    color: rgb(255, 255, 255);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
     /* position: relative; */
     /* left: 50%; */
 }
@@ -82,13 +110,19 @@ li{
     position: relative;
     width: fit-content;
     left: 0;
-    padding: 1% 1%  1% 4%;
+    min-width: 10vh;
+    padding: 3% 3%  3% 3%;
     min-height: 4vh;
     margin: 2%;
-    border-radius: 0vh 2vh 2vh 2vh;
+    border-radius: 0vh 4vh 4vh 4vh;
     background-image:linear-gradient(rgb(255, 255, 255),rgb(255, 255, 255));
-    color: rgb(50, 50, 50);
+    color: rgb(0, 0, 0);
+    box-shadow: 0.5vh 0.5vh 0.5vh 0vh rgba(0, 0, 0, 0.385);
     align-self: left;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.you:hover{
+    background-color:rgba(255, 255, 255, 0.738);
 }
 
 h3{

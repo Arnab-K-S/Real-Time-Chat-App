@@ -42,6 +42,8 @@ firebase.database().ref("messages").on("child_added", function (snapshot) {
     html += "</li>";
     document.getElementById("cd").innerHTML += html;
 
+    var myDiv = document.getElementById("cd");
+    myDiv.scrollTop = myDiv.scrollHeight;
 });
 
 var input = document.getElementById("message");
@@ -49,10 +51,5 @@ input.addEventListener("keypress", function (event) {
 if (event.key === "Enter") {
     event.preventDefault();
     document.getElementById("sub").click();
-    var myDiv = document.getElementById("cd");
-    myDiv.scrollTop = myDiv.scrollHeight;
-}
-});
-
-
-
+   
+}});

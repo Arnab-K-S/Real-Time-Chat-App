@@ -20,7 +20,7 @@ firebase.initializeApp(firebaseConfig);
 
 function sendmessage() {
     console.log("Function executed");
-    if (document.getElementById("message").value != '' && document.getElementById("name").value!='') {
+    if (document.getElementById("message").value != '' && document.getElementById("name").value != '') {
         firebase.database().ref("messages").push().set({
             "name": document.getElementById("name").value,
             "message": document.getElementById("message").value
@@ -36,7 +36,7 @@ firebase.database().ref("messages").on("child_added", function (snapshot) {
     var html = "";
     html += "<li>";
     if (snapshot.val().name == document.getElementById("name").value)
-        html += "<div class=\"me\">"+"<h3>"+snapshot.val().name + "</h3>" + snapshot.val().message+"</div>";
+        html += "<div class=\"me\">" + snapshot.val().message + "</div>";
     else
         html += "<div class=\"you\">" + "<h4>" + snapshot.val().name + "</h4>" + snapshot.val().message + "</div>";
     html += "</li>";
@@ -48,8 +48,29 @@ firebase.database().ref("messages").on("child_added", function (snapshot) {
 
 var input = document.getElementById("message");
 input.addEventListener("keypress", function (event) {
-if (event.key === "Enter") {
-    event.preventDefault();
-    document.getElementById("sub").click();
-   
-}});
+    if (event.key === "Enter") {
+        event.preventDefault();
+        document.getElementById("sub").click();
+
+    }
+});
+
+function cont() {
+
+    if (document.getElementById("contacts").style.transform == "translateX(-100vh)") {
+        document.getElementById("contacts").style.transform = "translateX(0vh)";
+        // document.getElementById("contacts").style.display = "none";
+
+    }
+    else {
+        document.getElementById("contacts").style.transform = "translateX(-100vh)";
+        // document.getElementById("contacts").style.display = "block";
+    }
+
+    // if (document.getElementById("contacts").style.display=="none")
+    //     document.getElementById("contacts").style.display="block";
+    // else    
+    //     document.getElementById("contacts").style.display="none";
+
+}
+document.getElementById("menu-button").addEventListener("click", cont)

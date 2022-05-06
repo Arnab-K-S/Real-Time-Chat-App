@@ -117,7 +117,7 @@ document.getElementById("menu-button").addEventListener("click", cont)
 var i=1;
 function themechange(){
     i+=1;
-    if (i>11)
+    if (i>16)
     i=1;
     document.getElementById("cd").style.backgroundImage = "url(\"wallpapers/"+i+".jpg\")";
 }

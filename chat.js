@@ -28,11 +28,12 @@ function sendmessage() {
         document.getElementById("message").value = '';
     }
     return false;
-
+    
 }
 document.getElementById("sub").addEventListener("click", sendmessage);
 
 firebase.database().ref("messages").on("child_added", function (snapshot) {
+    // var start = new Date().getTime();
     var html = "";
     html += "<li>";
     if (snapshot.val().name == document.getElementById("name").value)
@@ -44,6 +45,16 @@ firebase.database().ref("messages").on("child_added", function (snapshot) {
 
     var myDiv = document.getElementById("cd");
     myDiv.scrollTop = myDiv.scrollHeight;
+
+    // var end = new Date().getTime();
+    // var time = end - start;
+    if (document.getElementById("name").value != '') {
+        var myAudio = new Audio('audios/msg.mp3');
+        myAudio.play();
+    }
+
+   
+    
 });
 
 var input = document.getElementById("message");
@@ -106,8 +117,10 @@ document.getElementById("menu-button").addEventListener("click", cont)
 var i=1;
 function themechange(){
     i+=1;
-    if (i>5)
+    if (i>11)
     i=1;
     document.getElementById("cd").style.backgroundImage = "url(\"wallpapers/"+i+".jpg\")";
 }
 document.getElementById("theme").addEventListener("click",themechange);
+
+

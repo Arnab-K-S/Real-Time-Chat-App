@@ -57,13 +57,15 @@ input.addEventListener("keypress", function (event) {
 
 function cont() {
 
-    if (document.getElementById("contacts").style.transform == "translateX(-100vh)") {
-        document.getElementById("contacts").style.transform = "translateX(0vh)";
+    if (document.getElementById("contacts").style.transform == "translateX(-100%)") {
+        document.getElementById("contacts").style.transform = "translateX(0%)";
+        document.getElementById("contacts").style.width = "20%";
         // document.getElementById("contacts").style.display = "none";
-
+        
     }
     else {
-        document.getElementById("contacts").style.transform = "translateX(-100vh)";
+        document.getElementById("contacts").style.width = "0%";
+        document.getElementById("contacts").style.transform = "translateX(-100%)";
         // document.getElementById("contacts").style.display = "block";
     }
 
@@ -74,3 +76,38 @@ function cont() {
 
 }
 document.getElementById("menu-button").addEventListener("click", cont)
+
+
+
+// var provider = new firebase.auth.GoogleAuthProvider();
+// // console.log(provider);
+
+// firebase.auth()
+//     .signInWithRedirect(provider).then((result) => {
+//         /** @type {firebase.auth.OAuthCredential} */
+//         var credential = result.credential;
+
+//         // This gives you a Google Access Token. You can use it to access the Google API.
+//         var token = credential.accessToken;
+//         // The signed-in user info.
+//         var user = result.user;
+//         // ...
+//     }).catch((error) => {
+//         // Handle Errors here.
+//         var errorCode = error.code;
+//         var errorMessage = error.message;
+//         // The email of the user's account used.
+//         var email = error.email;
+//         // The firebase.auth.AuthCredential type that was used.
+//         var credential = error.credential;
+//         // ...
+//     });
+
+var i=1;
+function themechange(){
+    i+=1;
+    if (i>5)
+    i=1;
+    document.getElementById("cd").style.backgroundImage = "url(\"wallpapers/"+i+".jpg\")";
+}
+document.getElementById("theme").addEventListener("click",themechange);

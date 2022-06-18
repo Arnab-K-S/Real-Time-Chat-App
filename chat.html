@@ -2,73 +2,70 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" type="image/x-icon" href="icons/dp.jfif" />
-
-    <!--============= CSS SHEETS=============== -->
-    <link rel="stylesheet" href="chat.css">
-    <link rel="stylesheet" href="navbar.css">
-    <link rel="stylesheet" href="contacts.css">
-    <link rel="stylesheet" href="mobile-view.css">
-
-    <title>Chat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito&display=swap" rel="stylesheet">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="CSS/chat.css" rel="stylesheet">
+    <link href="CSS/pclook.css" rel="stylesheet">
+    <link href="CSS/mobile-view.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link rel="stylesheet" href="https://fonts.sandbox.google.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <title>Chat App</title>
 </head>
 
 <body>
+    <!-- <div class="pc">
+    <div id="login" class="login">
+        <label>Enter your name to chat</label>
+        <input id="name" type="text">
+        Enter your name with whom u want to chat
+        <input type="text" id="contact">
+        <input id="join" type="submit" value="Join">
+    </div>
+    </div> -->
+
+    <div id="options">
+        <ul>
+           <button> <li>Change Theme</li></button>
+           <button> <li>Contacts</li></button>
+           <button> <li>Sign Out</li></button>
+           <button> <li>Stickers</li></button>
+        </ul>
+        <button id="menu2">
+    
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+    </div>
     <nav>
-        <button2 id="menu-button"><img src="icons/MENU.png" alt="=" ></button2>
-        <button id="theme">Change Wallpaper</button>
-        <h1>Non Stop Chat</h1>
-        <div class="namecontainer">
-            <input type="text" id="name" name="name" placeholder="Enter Your Name to chat">
-        </div>
+        <button id="menu">
+
+            <span class="material-symbols-rounded">
+                menu
+            </span>
+        </button>
+        <div class="contact-name">
+            <span class="navbar-text">
+                <h3 id="contact2">
+                   contact-name
+                </h3>
+                <h5>Online</h5>
+            </span>
     </nav>
-    <div class="container">
 
-        <div class="contacts" id="contacts">
-
-
-            <ul class="lgu">  
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Aryadeep</div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Diptabh </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Rohan   </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Anubhav </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Anubhab </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-                <li class="lg"> <button>  <div class="dp"> <img src="icons/dp.jfif" alt="dp"> </div>   <div class="contact-name">Contact </div> </button></li>
-            </ul>      
-
-
+    <div id="container" class="container">
+        <div id="cd" class="chatbox"></div>
+    </div>
+    <div id="reply">
+        <div class="mbar">
+            <input type="text" id="message" name="message" placeholder="Type a message.....">
+            <button id="sub"><span class="material-symbols-rounded">Send</span></button>
         </div>
-        <div class="parent">
-            <div class="screen">
-               
-                <div id="cd" class="card"></div>
-                <div class="mbar">
-                    <input type="text" id="message" name="message" placeholder="Type a message.....">
-                    <input id="sub" type="submit" value="">
-                </div>
-            </div>
-        </div>
-
+    </div>
     </div>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/firebase/7.14.1-0/firebase.js"></script>
 <script src="chat.js"></script>
-
 </html>

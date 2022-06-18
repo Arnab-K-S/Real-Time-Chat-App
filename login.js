@@ -2,7 +2,6 @@
 // import {initializeApp} from "https://www.gstatic.com/firebasejs/9.7.0/firebase-app.js";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
 // Your web app's Firebase configuration
 const firebaseConfig = {
     apiKey: "AIzaSyBWOVdpXI4Xbo0Me2uSDfpQL24VnJbd05w",
@@ -14,37 +13,29 @@ const firebaseConfig = {
     appId: "1:409678714305:web:b70e44805e0dad240d8b40"
 };
 
-// Initialize Firebase
 firebase.initializeApp(firebaseConfig);
-
-
-var provider = new firebase.auth.GoogleAuthProvider();
-// console.log(provider);
-
-function glogin() {
-    console.log("Button Clicked");
-    firebase.auth().signInWithPopup(provider).then((result) => {
-        /** @type {firebase.auth.OAuthCredential} */
-        var credential = result.credential;
-
-        // This gives you a Google Access Token. You can use it to access the Google API.
-        var token = credential.accessToken;
-        // The signed-in user info.
-        var user = result.user;
-        console.log(user);
-        // ...
-    }).catch((error) => {
-        // Handle Errors here.
-        var errorCode = error.code;
-        var errorMessage = error.message;
-        // The email of the user's account used.
-        var email = error.email;
-        // The firebase.auth.AuthCredential type that was used.
-        var credential = error.credential;
-        // ...
-    });
-
-
+function login() {
+    console.log("New User");
+    var name = document.getElementById("name").value;
+    var email = document.getElementById("email").value;
+    console.log("Name: "+name+"\nEmail: "+email);
+    if (name.value != '' && email.value != '') {
+        firebase.database().ref("Users").push().set({
+            "email": email,
+            "name": name
+        });
+    alert("User Registered!!!")
+    }
+    return false;
 }
-document.getElementById("button").addEventListener("click", glogin);
-// console.log(credential);
+
+// firebase.database().ref("Users").on("child_added", function (snapshot) {
+//     var html = "";
+//     html += "<li>";
+//     html += "<div>" + snapshot.val().name + "</div>";
+//     html += "<div>" + snapshot.val().email + "</div></li>";
+//     document.getElementById("card").innerHTML += html;
+
+// });
+
+document.getElementById("button").addEventListener("click", login);
